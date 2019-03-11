@@ -60,8 +60,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Publisher.cs" />
-    <Compile Include="Assets\Scripts\Receiver.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Car.cs" />
+    <Compile Include="Assets\Scripts\Controllers\CarController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\CrossRoadController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Publisher.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Receiver.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Route.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Waypoint.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Github Projects/SoftwareDevelopmentSimulator/Simulator/Kruispunt Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -278,6 +283,9 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="M2Mqtt.Net">
+      <HintPath>D:/Github Projects/SoftwareDevelopmentSimulator/Simulator/Kruispunt Simulator/Assets/Dlls/M2Mqtt.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>D:/Github Projects/SoftwareDevelopmentSimulator/Simulator/Kruispunt Simulator/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -286,9 +294,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>D:/Github Projects/SoftwareDevelopmentSimulator/Simulator/Kruispunt Simulator/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="M2Mqtt.Net">
-      <HintPath>D:/Github Projects/SoftwareDevelopmentSimulator/Simulator/Kruispunt Simulator/Assets/Dlls/M2Mqtt.Net.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
