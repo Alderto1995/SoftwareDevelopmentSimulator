@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Route : MonoBehaviour
 {
-    public Waypoint StartWP { get; private set; }
-    public Waypoint DestinationWP { get; private set; }
+    public List<GameObject> waypoints;
 
-    public GameObject start;
-    public GameObject destination;
+    public List<Waypoint> Waypoints { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
-        StartWP = start.GetComponent<Waypoint>();
-        DestinationWP = destination.GetComponent<Waypoint>();
+        Waypoints = new List<Waypoint>();
+
+        foreach(GameObject gameObject in waypoints)
+        {
+            Waypoints.Add(gameObject.GetComponent<Waypoint>());
+        }
     }
 }

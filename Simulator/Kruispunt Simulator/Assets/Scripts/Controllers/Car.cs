@@ -6,5 +6,6 @@ using UnityEngine;
 public class Car : ScriptableObject
 {
     public GameObject prefab;
-    public int maxSpeed;
+    public float maxSpeed;
+    public float safeDistance;
 }

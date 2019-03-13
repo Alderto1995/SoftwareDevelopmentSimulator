@@ -8,21 +8,21 @@ using uPLibrary.Networking.M2Mqtt.Messages;
 
 public class Receiver : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        MqttClient client;
-        string broker = "broker.0f.nl";
-        string topic = "1";
-        string clientId = "test";
+    public MqttClient Client { get; private set; }
 
+    private string broker = "broker.0f.nl";
+    private string clientId = "team1";
+    private int teamId = 1;
+
+    public Receiver(string topic)
+    {
         try
         {
-            client = new MqttClient(broker);
-            client.Connect(clientId);
-            client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
-            client.Subscribe(new string[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
-            Debug.Log("Jooo Verbonden");
+            topic = $"{teamId}/{topic}";
+            Client = new MqttClient(broker);
+            Client.Connect(clientId);
+            Client.Subscribe(new string[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+            Debug.Log($"Receiver: Connected to topic: '{topic}'!");
         }
         catch (Exception ex)
         {
@@ -30,15 +30,8 @@ public class Receiver : MonoBehaviour
         }
     }
 
-
     static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
     {
         Debug.Log(Encoding.UTF8.GetString(e.Message));
-        // handle message received 
-    }
-
-    void Update()
-    {
-
     }
 }

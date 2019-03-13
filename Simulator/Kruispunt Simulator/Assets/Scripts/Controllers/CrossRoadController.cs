@@ -9,7 +9,7 @@ public class CrossRoadController : MonoBehaviour
 
     private List<Route> routes = new List<Route>();
     private float spawnTimer;
-    private float maxSpawnTime = 10f;
+    private float maxSpawnTime = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,8 +36,9 @@ public class CrossRoadController : MonoBehaviour
     {
         Route route = routes[Random.Range(0, routes.Count)];
         Car car = cars[Random.Range(0,cars.Length)];
-        GameObject go = Instantiate(car.prefab);
-        go.transform.position = route.StartWP.Position;
-        go.GetComponent<CarController>().SetData(route.StartWP, route.DestinationWP, car);
+        Vector3 pos = route.Waypoints[0].Position;
+        pos.y += 2;
+        GameObject go = Instantiate(car.prefab, pos, car.prefab.transform.rotation);
+        go.GetComponent<CarController>().SetData(route, car);
     }
 }

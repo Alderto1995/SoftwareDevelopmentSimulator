@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2935772726558887426}
   - component: {fileID: 695607058426084045}
   - component: {fileID: 7199764842714465051}
-  - component: {fileID: 5734294316125716129}
+  - component: {fileID: 9006297862594933852}
   m_Layer: 0
   m_Name: WayPoint
   m_TagString: Untagged
@@ -92,7 +92,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5734294316125716129
+--- !u!114 &9006297862594933852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,6 +104,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0e24c07c39b19448969ae018ee1494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  straightThrough: {fileID: 0}
-  right: {fileID: 0}
-  left: {fileID: 0}
