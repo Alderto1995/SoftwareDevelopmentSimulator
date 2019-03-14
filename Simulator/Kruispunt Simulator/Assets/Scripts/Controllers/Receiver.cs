@@ -8,20 +8,21 @@ using uPLibrary.Networking.M2Mqtt.Messages;
 
 public class Receiver : MonoBehaviour
 {
-    public MqttClient Client { get; private set; }
+    protected MqttClient client;
+    protected string broker = "broker.0f.nl";
+    protected string clientId = "team1";
+    protected int teamId = 1;
+    protected string topic = "";
 
-    private string broker = "broker.0f.nl";
-    private string clientId = "team1";
-    private int teamId = 1;
-
-    public Receiver(string topic)
+    protected void Init()
     {
         try
         {
             topic = $"{teamId}/{topic}";
-            Client = new MqttClient(broker);
-            Client.Connect(clientId);
-            Client.Subscribe(new string[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+            client = new MqttClient(broker);
+            client.Connect(clientId);
+            client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
+            client.Subscribe(new string[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE } );
             Debug.Log($"Receiver: Connected to topic: '{topic}'!");
         }
         catch (Exception ex)
@@ -30,8 +31,9 @@ public class Receiver : MonoBehaviour
         }
     }
 
-    static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+    protected virtual void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
     {
-        Debug.Log(Encoding.UTF8.GetString(e.Message));
+        string message = Encoding.UTF8.GetString(e.Message);
+        Debug.Log($"Received message: '{message}'!");
     }
 }

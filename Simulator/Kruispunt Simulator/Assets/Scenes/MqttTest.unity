@@ -321,7 +321,7 @@ PrefabInstance:
     - target: {fileID: 695607058426084045, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7199764842714465051, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
@@ -574,7 +574,7 @@ PrefabInstance:
     - target: {fileID: 695607058426084045, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7199764842714465051, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
@@ -658,7 +658,7 @@ PrefabInstance:
     - target: {fileID: 695607058426084045, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7199764842714465051, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
@@ -917,7 +917,7 @@ PrefabInstance:
     - target: {fileID: 695607058426084045, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7199764842714465051, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
@@ -1264,7 +1264,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1340548366}
   - component: {fileID: 1340548365}
-  - component: {fileID: 1340548368}
   - component: {fileID: 1340548367}
   m_Layer: 0
   m_Name: CrossRoadController
@@ -1331,18 +1330,6 @@ MonoBehaviour:
   m_VoxelSize: 0.2
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 31dc0d7b74840004b9051952cc1f27c0, type: 2}
---- !u!114 &1340548368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340548364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21011a92207df7b469fa4395094b9852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1369026149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8888523047319053864, guid: 7d0d9863060551341b0c700459d7b4d2,
@@ -1364,7 +1351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1476045531
 Transform:
   m_ObjectHideFlags: 0
@@ -1560,7 +1547,7 @@ PrefabInstance:
     - target: {fileID: 695607058426084045, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7199764842714465051, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
@@ -1687,6 +1674,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sensor1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227746925746670447, guid: ba5b0c27fd147cf4dae7cb3b55a1b249,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2227746925746670448, guid: ba5b0c27fd147cf4dae7cb3b55a1b249,
         type: 3}
@@ -1827,7 +1819,7 @@ PrefabInstance:
     - target: {fileID: 695607058426084045, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7199764842714465051, guid: 3286a70fdb005f24dbb11df1eb2b1164,
         type: 3}
@@ -1847,6 +1839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Light1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888523047319053865, guid: 7d0d9863060551341b0c700459d7b4d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8888523047319053864, guid: 7d0d9863060551341b0c700459d7b4d2,
         type: 3}

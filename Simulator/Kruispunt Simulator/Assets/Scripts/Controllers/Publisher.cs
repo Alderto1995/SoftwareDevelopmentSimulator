@@ -41,7 +41,7 @@ public class Publisher : MonoBehaviour
     public void SendMessage(string topic, string message)
     {
         topic = $"{teamId}/{topic}";
-        client.Publish(topic, Encoding.UTF8.GetBytes(message), MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, false);
+        client.Publish(topic, Encoding.UTF8.GetBytes(message), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         Debug.Log($"Message: '{message}' sent to topic: '{topic}'!");
     }
 }
