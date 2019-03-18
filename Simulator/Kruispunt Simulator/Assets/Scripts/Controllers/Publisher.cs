@@ -12,7 +12,7 @@ public class Publisher : MonoBehaviour
 
     private MqttClient client;
     private string broker = "broker.0f.nl";
-    private string clientId = "team1";
+    private string clientId = "SimulatorPublisher";
     private int teamId = 1;
 
     private void Awake()

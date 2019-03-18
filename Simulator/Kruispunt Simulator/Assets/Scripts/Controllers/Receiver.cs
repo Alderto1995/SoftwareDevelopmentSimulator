@@ -10,11 +10,10 @@ public class Receiver : MonoBehaviour
 {
     protected MqttClient client;
     protected string broker = "broker.0f.nl";
-    protected string clientId = "team1";
     protected int teamId = 1;
     protected string topic = "";
 
-    protected void Init()
+    protected void Init(string clientId)
     {
         try
         {
