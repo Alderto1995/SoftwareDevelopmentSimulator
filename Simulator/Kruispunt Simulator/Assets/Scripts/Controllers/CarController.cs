@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(Rigidbody), typeof(Collider), typeof(NavMeshAgent))]
+[RequireComponent(typeof(Rigidbody), typeof(Collider))]
 public class CarController : MonoBehaviour
 {
     private Rigidbody rigidbody;
     private List<Waypoint> waypoints;
     private Car car;
     private float distToGround;
-    //private NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         distToGround = GetComponent<Collider>().bounds.extents.y;
-        //agent = GetComponent<NavMeshAgent>();
-        //agent.speed = car.maxSpeed;
     }
 
     // Update is called once per frame
@@ -65,10 +62,6 @@ public class CarController : MonoBehaviour
                     if(nextWPPosition.Continue == true)
                     {
                         waypoints.Remove(nextWPPosition);
-                        if (waypoints.Count > 0)
-                        {
-                            //agent.SetDestination(new Vector3(waypoints[0].x, transform.position.y, waypoints[0].z));
-                        }
                     }
                     else
                     {

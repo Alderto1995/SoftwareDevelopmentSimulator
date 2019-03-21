@@ -12,9 +12,10 @@ public class Publisher : MonoBehaviour
 
     private MqttClient client;
     private string broker = "broker.0f.nl";
-    private string clientId = "SimulatorPublisher";
+    private string clientId;
     private int teamId = 1;
 
+    //Instantieert de Singleton.
     private void Awake()
     {
         if(instance == null)
@@ -28,6 +29,7 @@ public class Publisher : MonoBehaviour
     {
         try
         {
+            clientId = Guid.NewGuid().ToString();
             client = new MqttClient(broker);
             client.Connect(clientId);
             Debug.Log($"Publisher: connected to broker: '{broker}'!");
@@ -41,7 +43,7 @@ public class Publisher : MonoBehaviour
     public void SendMessage(string topic, string message)
     {
         topic = $"{teamId}/{topic}";
-        client.Publish(topic, Encoding.UTF8.GetBytes(message), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        client.Publish(topic, Encoding.UTF8.GetBytes(message), MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, false);
         Debug.Log($"Message: '{message}' sent to topic: '{topic}'!");
     }
 }

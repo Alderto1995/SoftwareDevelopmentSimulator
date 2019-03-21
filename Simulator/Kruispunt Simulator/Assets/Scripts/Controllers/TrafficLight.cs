@@ -7,7 +7,6 @@ using uPLibrary.Networking.M2Mqtt.Messages;
 [RequireComponent(typeof(Renderer))]
 public class TrafficLight : Receiver
 {
-    public string clientId;
     public int groupId;
     public int componentId;
     public GameObject stopWaypoint;
@@ -25,7 +24,7 @@ public class TrafficLight : Receiver
     // Start is called before the first frame update
     void Start()
     {
-        Init(clientId);
+        Init();
         renderer = GetComponent<Renderer>();
         renderer.material.color = Color.red;
         color = Color.red;
@@ -41,6 +40,7 @@ public class TrafficLight : Receiver
         }
     }
 
+    //Wordt uitgevoerd wanneer er een bericht binnen is.
     protected override void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
     {
         string message = Encoding.UTF8.GetString(e.Message);
