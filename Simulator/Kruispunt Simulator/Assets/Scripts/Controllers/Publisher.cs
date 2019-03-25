@@ -5,15 +5,11 @@ using System.Text;
 using UnityEngine;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
+using Assets.Scripts.Controllers;
 
-public class Publisher : MonoBehaviour
+public class Publisher : Communication
 {
     public static Publisher instance;
-
-    private MqttClient client;
-    private string broker = "broker.0f.nl";
-    private string clientId;
-    private int teamId = 1;
 
     //Instantieert de Singleton.
     private void Awake()

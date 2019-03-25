@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controllers\Car.cs" />
     <Compile Include="Assets\Scripts\Controllers\CarController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Communication.cs" />
     <Compile Include="Assets\Scripts\Controllers\CrossRoadController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Publisher.cs" />
     <Compile Include="Assets\Scripts\Controllers\Receiver.cs" />

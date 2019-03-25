@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Controllers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -6,13 +7,9 @@ using UnityEngine;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
-public abstract class Receiver : MonoBehaviour
+public abstract class Receiver : Communication
 {
-    protected MqttClient client;
-    protected string broker = "broker.0f.nl";
-    protected int teamId = 1;
     protected string topic = "";
-    protected string clientId;
 
     //Initialiseert de receiver door verbinding te maken met de broker.
     protected void Init()
