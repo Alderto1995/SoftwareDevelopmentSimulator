@@ -9,6 +9,7 @@ public class TrafficLight : Receiver
 {
     public int groupId;
     public int componentId;
+    public string userType;
     public GameObject stopWaypoint;
 
     private Renderer renderer;
@@ -18,7 +19,7 @@ public class TrafficLight : Receiver
 
     private void Awake()
     {
-        topic = $"motor_vehicle/{groupId}/light/{componentId}";
+        topic = $"{userType}/{groupId}/light/{componentId}";
     }
 
     // Start is called before the first frame update

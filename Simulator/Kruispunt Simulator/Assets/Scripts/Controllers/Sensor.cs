@@ -7,6 +7,7 @@ public class Sensor : MonoBehaviour
 {
     public int groupId;
     public int componentId;
+    public string userType;
 
     private Collider collider;
     private int carCounter;
@@ -23,7 +24,7 @@ public class Sensor : MonoBehaviour
     {
         if(carCounter <= 0)
         {
-            Publisher.instance.SendMessage($"motor_vehicle/{groupId}/sensor/{componentId}", "1");
+            Publisher.instance.SendMessage($"{userType}/{groupId}/sensor/{componentId}", "1");
         }
         carCounter++;
     }

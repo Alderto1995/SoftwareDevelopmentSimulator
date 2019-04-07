@@ -62,12 +62,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controllers\Car.cs" />
     <Compile Include="Assets\Scripts\Controllers\CarController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\CarSpawner.cs" />
     <Compile Include="Assets\Scripts\Controllers\Communication.cs" />
     <Compile Include="Assets\Scripts\Controllers\CrossRoadController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Cycle.cs" />
+    <Compile Include="Assets\Scripts\Controllers\CycleController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\CycleSpawner.cs" />
+    <Compile Include="Assets\Scripts\Controllers\CycleWaypoint.cs" />
     <Compile Include="Assets\Scripts\Controllers\Publisher.cs" />
     <Compile Include="Assets\Scripts\Controllers\Receiver.cs" />
     <Compile Include="Assets\Scripts\Controllers\Route.cs" />
     <Compile Include="Assets\Scripts\Controllers\Sensor.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Spawner.cs" />
     <Compile Include="Assets\Scripts\Controllers\TrafficLight.cs" />
     <Compile Include="Assets\Scripts\Controllers\Waypoint.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

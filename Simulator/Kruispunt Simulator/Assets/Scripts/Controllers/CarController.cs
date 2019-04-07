@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class CarController : MonoBehaviour
 {
     private Rigidbody rigidbody;
-    private List<Waypoint> waypoints;
+    private Waypoint nextPoint;
     private Car car;
     private float distToGround;
 
@@ -24,10 +24,11 @@ public class CarController : MonoBehaviour
         Move();
     }
 
-    public void SetData(Route route, Car car)
+    public void SetData(Waypoint start, Car car)
     {
-        waypoints = new List<Waypoint>(route.Waypoints);
-        transform.LookAt(new Vector3(waypoints[1].Position.x, transform.position.y, waypoints[1].Position.z));
+        nextPoint = start;
+        Waypoint next = GetNewWaypoint(start);
+        transform.LookAt(new Vector3(next.Position.x, transform.position.y, next.Position.z));
         this.car = car;
     }
 
@@ -52,16 +53,15 @@ public class CarController : MonoBehaviour
     {
         if (IsGrounded())
         {
-            if (waypoints.Count > 0)
+            if (nextPoint != null)
             {
-                Waypoint nextWPPosition = waypoints[0];
-                Vector2 nextPosition2D = new Vector2(nextWPPosition.Position.x, nextWPPosition.Position.z);
+                Vector2 nextPosition2D = new Vector2(nextPoint.Position.x, nextPoint.Position.z);
                 Vector2 dir = nextPosition2D - new Vector2(transform.position.x, transform.position.z);
                 if (dir.magnitude <= 0.1f)
                 {
-                    if(nextWPPosition.Continue == true)
+                    if(nextPoint.Continue == true)
                     {
-                        waypoints.Remove(nextWPPosition);
+                        nextPoint = GetNewWaypoint(nextPoint);
                     }
                     else
                     {
@@ -79,6 +79,7 @@ public class CarController : MonoBehaviour
                     else
                     {
                         rigidbody.velocity = dir3D * car.maxSpeed;
+                        transform.LookAt(new Vector3(nextPoint.Position.x, transform.position.y, nextPoint.Position.z));
                     }
                 }
             }
@@ -87,5 +88,16 @@ public class CarController : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    private Waypoint GetNewWaypoint(Waypoint waypoint)
+    {
+        List<Transform> waypoints = waypoint.waypoints;
+        if(waypoints.Count > 0)
+        {
+            Transform t = waypoints[Random.Range(0, waypoints.Count)];
+            return t.GetComponent<Waypoint>();
+        }
+        return null;
     }
 }
