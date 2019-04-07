@@ -9873,6 +9873,11 @@ PrefabInstance:
       propertyPath: groupId
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2227746925746670452, guid: ba5b0c27fd147cf4dae7cb3b55a1b249,
+        type: 3}
+      propertyPath: userType
+      value: motor_vehicle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba5b0c27fd147cf4dae7cb3b55a1b249, type: 3}
 --- !u!4 &1095905947 stripped
@@ -10416,6 +10421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: componentId
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227746925746670452, guid: ba5b0c27fd147cf4dae7cb3b55a1b249,
+        type: 3}
+      propertyPath: userType
+      value: motor_vehicle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba5b0c27fd147cf4dae7cb3b55a1b249, type: 3}
