@@ -36,4 +36,9 @@ public abstract class Receiver : Communication
         string message = Encoding.UTF8.GetString(e.Message);
         Debug.Log($"Received message: '{message}'!");
     }
+
+    private void OnApplicationQuit()
+    {
+        client.Disconnect();
+    }
 }

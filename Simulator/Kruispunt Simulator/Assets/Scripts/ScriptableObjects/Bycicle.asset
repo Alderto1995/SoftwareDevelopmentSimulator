@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beaa6e1e9281e974ebabf15b9a0323d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 95831e2c768cfb74bad09568ae8c2c9e, type: 3}
   m_Name: Bycicle
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2994254674417003763, guid: e0a0f8d0969d13c4a965ba8eeb5adc8f, type: 3}
+  prefab: {fileID: 7966785936855050243, guid: 90e95a1ca096cc54db9a35e35f551b6a, type: 3}
   maxSpeed: 4
-  acceleration: 5
+  acceleration: 8

@@ -19,7 +19,7 @@ public class CarSpawner : Spawner
         spawnTime -= Time.deltaTime;
         if (spawnTime <= 0f)
         {
-            CrossRoadController.instance.SpawnCar(waypoint);
+            IntersectionController.instance.SpawnCar(waypoint);
             spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
         }
     }
