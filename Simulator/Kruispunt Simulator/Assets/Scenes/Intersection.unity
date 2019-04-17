@@ -1121,9 +1121,13 @@ PrefabInstance:
       value: 0.047393367
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 351961214}
+      objectReference: {fileID: 1762198157}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
@@ -1135,7 +1139,7 @@ PrefabInstance:
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: halfpoint
       value: 
-      objectReference: {fileID: 1762198157}
+      objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -1152,6 +1156,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: fromHalfpoint
+      value: 
+      objectReference: {fileID: 1870263786}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -1833,9 +1841,13 @@ PrefabInstance:
       value: 0.047393367
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 23756750}
+      objectReference: {fileID: 1165756784}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
@@ -1847,7 +1859,7 @@ PrefabInstance:
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: halfpoint
       value: 
-      objectReference: {fileID: 1165756784}
+      objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -1858,12 +1870,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: groupId
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: componentId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: fromHalfpoint
+      value: 
+      objectReference: {fileID: 2093083941}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -2121,13 +2137,17 @@ PrefabInstance:
       value: 0.047393367
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: halfpoint
       value: 
-      objectReference: {fileID: 552981366}
+      objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1740557157}
+      objectReference: {fileID: 552981366}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
@@ -2152,6 +2172,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: fromHalfpoint
+      value: 
+      objectReference: {fileID: 425967481}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -4490,9 +4514,13 @@ PrefabInstance:
       value: 0.047393367
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1694500350}
+      objectReference: {fileID: 1870263786}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
@@ -4504,7 +4532,7 @@ PrefabInstance:
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: halfpoint
       value: 
-      objectReference: {fileID: 1870263786}
+      objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -4521,6 +4549,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: fromHalfpoint
+      value: 
+      objectReference: {fileID: 1762198157}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -5268,13 +5300,17 @@ PrefabInstance:
       value: 0.047393367
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: halfpoint
       value: 
-      objectReference: {fileID: 2093083941}
+      objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1323209808}
+      objectReference: {fileID: 2093083941}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
@@ -5299,6 +5335,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: fromHalfpoint
+      value: 
+      objectReference: {fileID: 1165756784}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -5907,16 +5947,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1694500350}
+      objectReference: {fileID: 441116241}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 2131760927}
+      objectReference: {fileID: 1740557157}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -5933,6 +5973,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1480707514}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -8595,9 +8639,13 @@ PrefabInstance:
       value: 0.047393367
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 568943635}
+      objectReference: {fileID: 1446970256}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
@@ -8609,7 +8657,7 @@ PrefabInstance:
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: halfpoint
       value: 
-      objectReference: {fileID: 1446970256}
+      objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -8626,6 +8674,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: fromHalfpoint
+      value: 
+      objectReference: {fileID: 651941531}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -17439,16 +17491,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1323209808}
+      objectReference: {fileID: 352715011}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 593258339}
+      objectReference: {fileID: 1034811687}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -17465,6 +17517,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 316778540}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -19362,16 +19418,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 135473760}
+      objectReference: {fileID: 351961214}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1480707514}
+      objectReference: {fileID: 23756750}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -19388,6 +19444,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 111230145}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -19710,16 +19770,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1034811687}
+      objectReference: {fileID: 1323209808}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1034811687}
+      objectReference: {fileID: 316778540}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -19736,6 +19796,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 352715011}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -21303,16 +21367,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1480707514}
+      objectReference: {fileID: 1740557157}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1480707514}
+      objectReference: {fileID: 441116241}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -21329,6 +21393,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1694500350}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -21556,13 +21624,17 @@ PrefabInstance:
       value: 0.047393367
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: halfpoint
       value: 
-      objectReference: {fileID: 425967481}
+      objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 568943635}
+      objectReference: {fileID: 425967481}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
@@ -21587,6 +21659,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: fromHalfpoint
+      value: 
+      objectReference: {fileID: 552981366}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -23223,13 +23299,17 @@ PrefabInstance:
       value: 0.047393367
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: halfpoint
       value: 
-      objectReference: {fileID: 651941531}
+      objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 352715011}
+      objectReference: {fileID: 651941531}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
@@ -23254,6 +23334,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: fromHalfpoint
+      value: 
+      objectReference: {fileID: 1446970256}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -23569,16 +23653,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 593258339}
+      objectReference: {fileID: 426351566}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 593258339}
+      objectReference: {fileID: 2131760927}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -23595,6 +23679,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 568943635}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -24899,16 +24987,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 111230145}
+      objectReference: {fileID: 23756750}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1034811687}
+      objectReference: {fileID: 135473760}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -24925,6 +25013,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 351961214}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled
@@ -25017,16 +25109,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 2131760927}
+      objectReference: {fileID: 568943635}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 2131760927}
+      objectReference: {fileID: 426351566}
     - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
       propertyPath: isFootButton
       value: 1
@@ -25043,6 +25135,10 @@ PrefabInstance:
       propertyPath: componentId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1210025240, guid: 6af7044d7e5d7d049863e75049797176, type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 593258339}
     - target: {fileID: 8093369113362093123, guid: 6af7044d7e5d7d049863e75049797176,
         type: 3}
       propertyPath: m_Enabled

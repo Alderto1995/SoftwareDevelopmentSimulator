@@ -13,6 +13,7 @@ public class AgentWaypoint : Waypoint
     public string groupId;
     public string componentId;
 
+    private bool buttonPushed = false;//Moet weg bij verbetering PedestrianWaypoint.
     private List<AgentWaypoint> agentWaypoints;
     private AgentWaypoint halfwaypoint;
 
@@ -47,7 +48,7 @@ public class AgentWaypoint : Waypoint
         }
         else if(halfpoint != null && previous != halfwaypoint)
         {
-            return halfpoint.GetComponent<AgentWaypoint>();
+            return halfwaypoint;
         }
         else
         {
@@ -65,16 +66,18 @@ public class AgentWaypoint : Waypoint
     //Moet ook naar een eigen pedestrian waypoint klasse.
     public void PushButton()
     {
-        if(groupId != null && componentId != null && userType != null && isFootButton == true)
+        if(groupId != null && componentId != null && userType != null && isFootButton && !buttonPushed)
         {
+            buttonPushed = true;
             Publisher.instance.SendMessage($"{userType}/{groupId}/sensor/{componentId}", "1");
         }
     }
     //Moet weg bij verbetering PedestrianWaypoint.
     public void ResetButton()
     {
-        if (groupId != null && componentId != null && userType != null && isFootButton == true)
+        if (groupId != null && componentId != null && userType != null && isFootButton && buttonPushed)
         {
+            buttonPushed = false;
             Publisher.instance.SendMessage($"{userType}/{groupId}/sensor/{componentId}", "0");
         }
     }

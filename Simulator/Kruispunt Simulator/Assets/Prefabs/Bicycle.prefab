@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3671328983469921705}
   - component: {fileID: 2593044336171317403}
   - component: {fileID: 8934822721311236198}
+  - component: {fileID: 2015882193113828214}
   m_Layer: 0
   m_Name: Bicycle
   m_TagString: Untagged
@@ -130,3 +131,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e85f97ae1cac214eacc0544104790fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &2015882193113828214
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7966785936855050243}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.50000006
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.00000005960464, y: 0, z: -0.00000008940696}

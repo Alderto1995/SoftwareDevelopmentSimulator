@@ -17,17 +17,6 @@ public class IntersectionController : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SpawnCar(Waypoint start)
     {
         Car car = cars[Random.Range(0,cars.Length)];

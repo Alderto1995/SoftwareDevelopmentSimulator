@@ -12,8 +12,6 @@ public class AgentController : MonoBehaviour
     private AgentWaypoint previousPoint;
     private Agent agent;
 
-    private bool pushedButton = false;//Moet weg bij verbetering PedestrianWaypoint.
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -50,13 +48,6 @@ public class AgentController : MonoBehaviour
                 }
                 else
                 {
-                    //Moet in eigen PedestrianController wanneer hier tijd voor is.
-                    if (nextPoint.isFootButton == true && pushedButton == false)
-                    {
-                        nextPoint.PushButton();
-                        pushedButton = true;
-                    }
-
                     if (nextPoint.Continue == true)
                     {
                         nextPoint.ResetButton();//Moet weg bij verbetering PedestrianWaypoint.
@@ -65,7 +56,10 @@ public class AgentController : MonoBehaviour
                         nextPoint = wp;
                         Vector3 wpPos = nextPoint.Position;
                         navAgent.SetDestination(new Vector3(wpPos.x, transform.position.y, wpPos.z));
-                        pushedButton = false;//Moet weg bij verbetering PedestrianWaypoint.
+                    }
+                    else
+                    {
+                        nextPoint.PushButton();
                     }
                 }
             }

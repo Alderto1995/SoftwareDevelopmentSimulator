@@ -33,7 +33,7 @@ public class Sensor : MonoBehaviour
     {
         if(carCounter == 1)
         {
-            Publisher.instance.SendMessage($"motor_vehicle/{groupId}/sensor/{componentId}", "0");
+            Publisher.instance.SendMessage($"{userType}/{groupId}/sensor/{componentId}", "0");
         }
         carCounter--;
     }
