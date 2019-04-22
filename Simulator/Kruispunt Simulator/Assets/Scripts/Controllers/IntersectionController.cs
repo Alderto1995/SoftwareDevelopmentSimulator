@@ -6,6 +6,7 @@ public class IntersectionController : MonoBehaviour
 {
     public static IntersectionController instance;
     public Car[] cars;
+    public Car bus;
     public Agent[] cycles;
     public Agent[] pedestrians;
 
@@ -24,6 +25,14 @@ public class IntersectionController : MonoBehaviour
         pos.y += 2;
         GameObject go = Instantiate(car.prefab, pos, car.prefab.transform.rotation);
         go.GetComponent<CarController>().SetData(start, car);
+    }
+
+    public void SpawnBus(Waypoint start)
+    {
+        Vector3 pos = start.Position;
+        pos.y += 2;
+        GameObject go = Instantiate(bus.prefab, pos, bus.prefab.transform.rotation);
+        go.GetComponent<CarController>().SetData(start, bus);
     }
 
     public void SpawnCycle(AgentWaypoint start)

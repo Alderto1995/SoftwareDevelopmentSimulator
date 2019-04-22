@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2227746925746670450}
   - component: {fileID: 2227746925746670449}
   - component: {fileID: 2227746925746670452}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sensor1
   m_TagString: Sensor
   m_Icon: {fileID: 0}
@@ -106,3 +106,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groupId: 1
   componentId: 1
+  userType: 

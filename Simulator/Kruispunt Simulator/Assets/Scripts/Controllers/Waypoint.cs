@@ -6,6 +6,7 @@ public class Waypoint : MonoBehaviour
 {
     public Vector3 Position { get; protected set; }
     public bool Continue { get; set; }
+    public bool isBus = false;
     public List<Transform> waypoints;
 
     // Start is called before the first frame update

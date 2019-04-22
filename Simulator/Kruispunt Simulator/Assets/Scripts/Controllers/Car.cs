@@ -6,4 +6,5 @@ using UnityEngine;
 public class Car : Entity
 {
     public float safeDistance;
+    public bool isBus;//Dit moet anders bij rework waypoints.
 }

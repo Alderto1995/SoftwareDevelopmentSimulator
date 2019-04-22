@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CarSpawner : Spawner
 {
+    public bool canSpawnBus = false;
+
     private Waypoint waypoint;
 
     // Start is called before the first frame update
@@ -19,7 +21,14 @@ public class CarSpawner : Spawner
         spawnTime -= Time.deltaTime;
         if (spawnTime <= 0f)
         {
-            IntersectionController.instance.SpawnCar(waypoint);
+            if(canSpawnBus && Random.Range(0, 10) == 10)
+            {
+                IntersectionController.instance.SpawnBus(waypoint);
+            }
+            else
+            {
+                IntersectionController.instance.SpawnCar(waypoint);
+            }
             spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
         }
     }

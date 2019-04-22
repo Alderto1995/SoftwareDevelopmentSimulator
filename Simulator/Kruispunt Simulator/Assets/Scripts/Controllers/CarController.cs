@@ -10,18 +10,22 @@ public class CarController : MonoBehaviour
     private Waypoint nextPoint;
     private Car car;
     private float distToGround;
+    private float halfSizeZ;
+    private int layerMask;
 
     // Start is called before the first frame update
     void Start()
     {
+        halfSizeZ = (transform.lossyScale.z * 0.5f);
         rigidbody = GetComponent<Rigidbody>();
         distToGround = GetComponent<Collider>().bounds.extents.y;
+        layerMask = 1 << 11;//car layer
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        //Move();
     }
 
     public void SetData(Waypoint start, Car car)
@@ -39,9 +43,9 @@ public class CarController : MonoBehaviour
 
     private bool IsCarInFront(Vector3 dir)
     {
-        if (Physics.Raycast(transform.position, dir, out RaycastHit hit))
+        if (Physics.Raycast(transform.position, dir, out RaycastHit hit, Mathf.Infinity, layerMask))
         {
-            if(hit.distance <= car.safeDistance && hit.transform.tag == transform.tag)
+            if ((hit.distance - halfSizeZ) <= car.safeDistance && hit.transform.tag == transform.tag)
             {
                 return true;
             }
@@ -57,29 +61,27 @@ public class CarController : MonoBehaviour
             {
                 Vector2 nextPosition2D = new Vector2(nextPoint.Position.x, nextPoint.Position.z);
                 Vector2 dir = nextPosition2D - new Vector2(transform.position.x, transform.position.z);
-                if (dir.magnitude <= 0.1f)
+
+                Vector2 dirNor = dir.normalized;
+                Vector3 dir3D = new Vector3(dirNor.x, 0, dirNor.y);
+                if (IsCarInFront(dir3D))
                 {
-                    if(nextPoint.Continue == true)
+                    rigidbody.velocity = Vector3.zero;
+                }
+                else if(dir.magnitude > 1f)
+                {
+                    rigidbody.velocity = dir3D * car.maxSpeed;
+                    transform.LookAt(new Vector3(nextPoint.Position.x, transform.position.y, nextPoint.Position.z));
+                }
+                else if(dir.magnitude <= 1f)
+                {
+                    if (nextPoint.Continue == true)
                     {
                         nextPoint = GetNewWaypoint(nextPoint);
                     }
                     else
                     {
                         rigidbody.velocity = Vector3.zero;
-                    }
-                }
-                else
-                {
-                    dir = dir.normalized;
-                    Vector3 dir3D = new Vector3(dir.x, 0, dir.y);
-                    if (IsCarInFront(dir3D))
-                    {
-                        rigidbody.velocity = Vector3.zero;
-                    }
-                    else
-                    {
-                        rigidbody.velocity = dir3D * car.maxSpeed;
-                        transform.LookAt(new Vector3(nextPoint.Position.x, transform.position.y, nextPoint.Position.z));
                     }
                 }
             }
@@ -90,13 +92,30 @@ public class CarController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        Move();
+    }
+    //bij waypoint rework moet dit in de waypoint gebeuren.
     private Waypoint GetNewWaypoint(Waypoint waypoint)
     {
-        List<Transform> waypoints = waypoint.waypoints;
+        List<Waypoint> waypoints = new List<Waypoint>();
+        foreach(Transform t in waypoint.waypoints)
+        {
+            Waypoint wp = t.GetComponent<Waypoint>();
+            if(wp.isBus && car.isBus)
+            {
+                return wp;
+            }
+            else if(!wp.isBus)
+            {
+                waypoints.Add(wp);
+            }
+        }
+
         if(waypoints.Count > 0)
         {
-            Transform t = waypoints[Random.Range(0, waypoints.Count)];
-            return t.GetComponent<Waypoint>();
+            return waypoints[Random.Range(0, waypoints.Count)];
         }
         return null;
     }
