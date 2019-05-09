@@ -9,6 +9,7 @@ public class IntersectionController : MonoBehaviour
     public Car bus;
     public Agent[] cycles;
     public Agent[] pedestrians;
+    public Vessel[] vessels;
 
     void Awake()
     {
@@ -51,5 +52,14 @@ public class IntersectionController : MonoBehaviour
         pos.y += 2;
         GameObject go = Instantiate(agent.prefab, pos, agent.prefab.transform.rotation);
         go.GetComponent<AgentController>().SetData(start, agent);
+    }
+
+    public void SpawnVessel(Waypoint start)
+    {
+        Vessel vessel = vessels[Random.Range(0, vessels.Length)];
+        Vector3 pos = start.Position;
+        pos.y += 2;
+        GameObject go = Instantiate(vessel.prefab, pos, vessel.prefab.transform.rotation);
+        go.GetComponent<VesselController>().SetData(start, vessel);
     }
 }

@@ -10,7 +10,7 @@ public class AgentSpawner : Spawner
     private AgentWaypoint waypoint;
 
     // Start is called before the first frame update
-    void Awake()
+    protected override void Init()
     {
         waypoint = GetComponent<AgentWaypoint>();
         spawnTime = Random.Range(minSpawnTime, maxSpawnTime);

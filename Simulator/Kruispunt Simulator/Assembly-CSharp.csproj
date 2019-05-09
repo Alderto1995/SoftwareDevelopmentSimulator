@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Controllers\AgentController.cs" />
     <Compile Include="Assets\Scripts\Controllers\AgentSpawner.cs" />
     <Compile Include="Assets\Scripts\Controllers\AgentWaypoint.cs" />
+    <Compile Include="Assets\Scripts\Controllers\BridgeController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Car.cs" />
     <Compile Include="Assets\Scripts\Controllers\CarController.cs" />
     <Compile Include="Assets\Scripts\Controllers\CarSpawner.cs" />
@@ -76,6 +77,9 @@
     <Compile Include="Assets\Scripts\Controllers\Sensor.cs" />
     <Compile Include="Assets\Scripts\Controllers\Spawner.cs" />
     <Compile Include="Assets\Scripts\Controllers\TrafficLight.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Vessel.cs" />
+    <Compile Include="Assets\Scripts\Controllers\VesselController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\VesselSpawner.cs" />
     <Compile Include="Assets\Scripts\Controllers\Waypoint.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Github Projects/SoftwareDevelopmentSimulator/Simulator/Kruispunt Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

@@ -9,7 +9,7 @@ public class CarSpawner : Spawner
     private Waypoint waypoint;
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Init()
     {
         waypoint = GetComponent<Waypoint>();
         spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
@@ -19,9 +19,9 @@ public class CarSpawner : Spawner
     void Update()
     {
         spawnTime -= Time.deltaTime;
-        if (spawnTime <= 0f)
+        if (spawnTime <= 0f && IsFree())
         {
-            if(canSpawnBus && Random.Range(0, 10) == 10)
+            if(canSpawnBus && Random.Range(0, 10) == 1)
             {
                 IntersectionController.instance.SpawnBus(waypoint);
             }

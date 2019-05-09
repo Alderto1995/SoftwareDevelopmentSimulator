@@ -22,10 +22,9 @@ public class CarController : MonoBehaviour
         layerMask = 1 << 11;//car layer
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        //Move();
+        Move();
     }
 
     public void SetData(Waypoint start, Car car)
@@ -92,10 +91,6 @@ public class CarController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        Move();
-    }
     //bij waypoint rework moet dit in de waypoint gebeuren.
     private Waypoint GetNewWaypoint(Waypoint waypoint)
     {
