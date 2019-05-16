@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Boat
   m_EditorClassIdentifier: 
   prefab: {fileID: 5468827727518393658, guid: eda3ec425d6fa134fa554ef2e2012440, type: 3}
-  maxSpeed: 5
+  maxSpeed: 6
   safeDistance: 3
   width: 8
