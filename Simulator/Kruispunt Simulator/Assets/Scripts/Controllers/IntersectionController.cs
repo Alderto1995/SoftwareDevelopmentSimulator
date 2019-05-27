@@ -19,6 +19,11 @@ public class IntersectionController : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        Publisher.instance.SendMessage("features/lifecycle/simulator/onconnect","");
+    }
+
     public void SpawnCar(Waypoint start)
     {
         Car car = cars[Random.Range(0,cars.Length)];

@@ -8,10 +8,8 @@ public class Sensor : MonoBehaviour
     public int groupId;
     public int componentId;
     public string userType;
-    public Transform subSensorTransform;
 
     private Collider collider;
-    private SubSensor subSensor;
     private int counter;
 
     // Start is called before the first frame update
@@ -19,16 +17,6 @@ public class Sensor : MonoBehaviour
     {
         collider = GetComponent<Collider>();
         collider.isTrigger = true;
-
-        if(subSensorTransform != null)
-        {
-            subSensor = subSensorTransform.GetComponent<SubSensor>();
-        }
-        else
-        {
-            subSensor = null;
-        }
-
         counter = 0;
     }
 

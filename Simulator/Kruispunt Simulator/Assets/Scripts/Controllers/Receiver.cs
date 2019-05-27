@@ -34,7 +34,7 @@ public abstract class Receiver : Communication
     protected virtual void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
     {
         string message = Encoding.UTF8.GetString(e.Message);
-        Debug.Log($"Received message: '{message}'!");
+        Debug.Log($"Received message from topic: {topic} Message: '{message}'!");
     }
 
     private void OnApplicationQuit()

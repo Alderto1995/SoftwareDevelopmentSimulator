@@ -88,7 +88,7 @@ public class TrafficLight : Receiver
     protected override void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
     {
         string message = Encoding.UTF8.GetString(e.Message);
-        Debug.Log($"Received: {message}");
+        Debug.Log($"Received message from topic: {topic} Message: '{message}'!");
         int.TryParse(message, out int value);
         ChangeColor(value);
     }

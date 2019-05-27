@@ -16,8 +16,9 @@ public class RotationController : Receiver
     public int maxRotation = 90;
     public int minRotation = 0;
     public RotationAxis axis;
+    public bool isDeck = false;
 
-    public bool open;
+    private bool open;
 
     void Awake()
     {
@@ -62,16 +63,30 @@ public class RotationController : Receiver
     protected override void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
     {
         string message = Encoding.UTF8.GetString(e.Message);
-        Debug.Log($"Received: {message}");
+        Debug.Log($"Received message from topic: {topic} Message: '{message}'!");
         int.TryParse(message, out int value);
 
         switch (value)
         {
             case 0:
-                open = false;
+                if (isDeck)
+                {
+                    open = true;
+                }
+                else
+                {
+                    open = false;
+                }
                 break;
             case 1:
-                open = true;
+                if (isDeck)
+                {
+                    open = false;
+                }
+                else
+                {
+                    open = true;
+                }
                 break;
         }
     }
